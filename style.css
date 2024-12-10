@@ -1,0 +1,114 @@
+:root {
+    --linear-color-1: #ffcb01;
+    --linear-color-2: #ff5993;
+}
+* {
+    font-size: 62.5%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.wrap {
+    display: none;
+}
+html {
+    overflow: hidden;
+}
+#c {
+    width: 100%;
+    height: 100vh;
+}
+.text {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2, h3 {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+    margin: 20px 0;
+    color: #fc6d6d;
+}
+h2 {
+    background: -o-linear-gradient(left, var(--linear-color-1), var(--linear-color-2));
+    background: -webkit-gradient(linear, left top, right top, from(var(--linear-color-1)), to(var(--linear-color-2)));
+    background: linear-gradient(90deg, var(--linear-color-1), var(--linear-color-2));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+h3 {
+    font-size: 3rem;
+    text-align: center;
+    background: -o-linear-gradient(right, var(--linear-color-2), var(--linear-color-1), var(--linear-color-2));
+    background: -o-linear-gradient(135deg, var(--linear-color-2), var(--linear-color-1), var(--linear-color-2));
+    background: linear-gradient(-45deg, var(--linear-color-2), var(--linear-color-1), var(--linear-color-2));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 2s steps(15) forwards, hidden 0.4s 2s infinite linear;
+}
+h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 5s 2.5s steps(50) forwards, hidden 0.4s 7.5s infinite linear;
+}
+
+@keyframes typing {
+    100% { 
+       left: 100%; 
+       margin: 0px 10px;
+    }
+}
+@keyframes hidden {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* btn */
+audio {
+    display: none;
+}
+.btn__wrap {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+} 
+h1 {
+    font-size: 2.6rem;
+    color: var(--linear-color-2);
+    border: 2px solid var(--linear-color-2);
+    background-color: rgb(253, 198, 207);
+    padding: 8px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
