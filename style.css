@@ -44,6 +44,7 @@ h2 {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    margin-bottom: 0;
 }
 h3 {
     font-size: 3rem;
@@ -110,5 +111,61 @@ h1 {
     background-color: rgb(253, 198, 207);
     padding: 8px 10px;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+.gift {
+    width: 100px;
+    cursor: pointer;
+    animation: animation 0.5s ease-in-out infinite;
+}
+@keyframes animation {
+    from {
+        transform: rotate3d(1, 2, 3, -10deg);
+    }
+    to {
+        transform: rotate3d(1, 2, 3, 10deg);
+    }
+}
+
+.gift__content {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    z-index: 10;
+    display: none;
+}
+.gift__content-blur {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.gift__wrap {
+    position: relative;
+    width: 220px;
+    height: 280px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 30px 12px;
+    z-index: 20;
+}
+.img__qr {
+    display: inline-block;
+    width: 100%;
+}
+.close {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    cursor: pointer;
+}
+.down__img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 12px;
+    padding: 4px 8px;
+    font-size: 1.4rem;
     cursor: pointer;
 }
