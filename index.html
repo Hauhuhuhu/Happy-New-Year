@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy New Year</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./main.css">
 </head>
@@ -28,6 +31,7 @@
         <h1>Click Me!</h1>
     </div>
     <div class="wrap">
+        <!-- <div class="icon_lixi"></div> -->
         <canvas id="c"></canvas>
         <div class="text">
             <h2>Happy New Year</h2>
@@ -45,12 +49,15 @@
               </svg>
             </span>
             <img src="./picture/test.jfif" alt="qr" class="img__qr">
-            <button class="down__img">Tải xuống</button>
+            <a href="https://lixi.momo.vn/lixi/zMYMJa4rMOKBA7y" class="down__img">NHẬN</a>
           </div>
         </div>
     </div>
     <audio controls loop>
         <source src="./PhaoHoa.mp3" type="audio/mpeg">
+    </audio>
+    <audio controls id="mix_tet">
+      <source src="./mix_TET2025.mp3" type="audio/mpeg">
     </audio>
 <script>
   var w = 550, h = 750

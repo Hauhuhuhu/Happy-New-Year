@@ -1,8 +1,10 @@
 :root {
-    --linear-color-1: #ffcb01;
-    --linear-color-2: #ff5993;
+    --linear-color-1: #FFE53B;
+    --linear-color-2: #FA709A;
 }
 * {
+    font-family: "Comic Neue", serif;
+    font-weight: 700;
     font-size: 62.5%;
     padding: 0;
     margin: 0;
@@ -10,10 +12,36 @@
     overflow: hidden;
 }
 .wrap {
+    position: relative;
     display: none;
 }
 html {
     overflow: hidden;
+}
+.icon_lixi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url(./picture/lixi.png);
+    background-size: cover;
+    animation: lixi 5s ease-in-out forwards;
+    z-index: 10;
+}
+@keyframes lixi {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(50px, 50vh);
+        display: none;
+    }
 }
 #c {
     width: 100%;
@@ -34,17 +62,16 @@ h2, h3 {
     position: relative;
     font-size: 3.6rem;
     line-height: 4.5rem;
-    margin: 20px 0;
     color: #fc6d6d;
 }
 h2 {
     background: -o-linear-gradient(left, var(--linear-color-1), var(--linear-color-2));
     background: -webkit-gradient(linear, left top, right top, from(var(--linear-color-1)), to(var(--linear-color-2)));
-    background: linear-gradient(90deg, var(--linear-color-1), var(--linear-color-2));
+    background: linear-gradient(45deg, var(--linear-color-1) 0%, var(--linear-color-2) 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    margin-bottom: 0;
+    transform: translateY(-15px);
 }
 h3 {
     font-size: 3rem;
@@ -105,19 +132,25 @@ audio {
     background-color: #000;
 } 
 h1 {
-    font-size: 2.6rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.4rem;
     color: var(--linear-color-2);
-    border: 2px solid var(--linear-color-2);
+    border: 3px solid var(--linear-color-2);
     background-color: rgb(253, 198, 207);
     padding: 8px 10px;
-    border-radius: 20px;
+    border-radius: 99px;
+    box-shadow: 0px 0px 15px var(--linear-color-2);
     cursor: pointer;
 }
 
 .gift {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
     width: 100px;
     cursor: pointer;
     animation: animation 0.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px red);
+    z-index: 1000;
 }
 @keyframes animation {
     from {
@@ -166,6 +199,12 @@ h1 {
     transform: translateX(-50%);
     bottom: 12px;
     padding: 4px 8px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    font-weight: 900;
     cursor: pointer;
+    background-color: rgb(252, 208, 216);
+    border: 1px solid #ff0c55;
+    color: #fc6d6d;
+    border-radius: 5px;
+    text-decoration: none;
 }
